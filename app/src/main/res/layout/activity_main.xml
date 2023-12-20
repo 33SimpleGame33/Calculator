@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textAlignment="textEnd"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/input2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/output" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:filterTouchesWhenObscured="false"
+        android:foregroundGravity="fill"
+        app:columnCount="2"
+        app:columnOrderPreserved="false"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/plus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="+"
+            app:layout_column="1"
+            app:layout_columnSpan="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="-"
+            app:layout_column="0"
+            app:layout_columnSpan="1"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/mul"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="*"
+            app:layout_columnSpan="1"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/div"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="/"
+            app:layout_column="0"
+            app:layout_columnSpan="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
